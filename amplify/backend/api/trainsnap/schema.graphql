@@ -1,0 +1,31 @@
+type User @model {
+  id: ID!
+  name: String!
+  iconImageUrl: String
+  description: String
+  bookmarkPostIds: [String]
+  posts: [Post] @connection(name: "UserPosts")
+}
+type Post @model {
+  id: ID!
+  date: Int!
+  imageUrls: [String]!
+  trainName: String
+  station: String
+  line: String
+  location: Location
+  likeUserIds: [String]
+  description: String!
+  user: User @connection(name: "UserPosts")
+  comments: [Comment] @connection(name: "PostComments")
+}
+type Comment @model {
+  id: ID!
+  content: String
+  post: Post @connection(name: "PostComments")
+}
+type Location {
+  lat: Int!
+  lng: Int!
+}
+

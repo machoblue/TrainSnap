@@ -1,0 +1,161 @@
+# this is an auto generated file. This will be overwritten
+query GetUser($id: ID!) {
+  getUser(id: $id) {
+    id
+    name
+    iconImageUrl
+    description
+    bookmarkPostIds
+    posts {
+      items {
+        id
+        date
+        imageUrls
+        trainName
+        station
+        line
+        likeUserIds
+        description
+      }
+      nextToken
+    }
+  }
+}
+query ListUsers(
+  $filter: ModelUserFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listUsers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      iconImageUrl
+      description
+      bookmarkPostIds
+      posts {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetPost($id: ID!) {
+  getPost(id: $id) {
+    id
+    date
+    imageUrls
+    trainName
+    station
+    line
+    location {
+      lat
+      lng
+    }
+    likeUserIds
+    description
+    user {
+      id
+      name
+      iconImageUrl
+      description
+      bookmarkPostIds
+      posts {
+        nextToken
+      }
+    }
+    comments {
+      items {
+        id
+        content
+      }
+      nextToken
+    }
+  }
+}
+query ListPosts(
+  $filter: ModelPostFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listPosts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      date
+      imageUrls
+      trainName
+      station
+      line
+      location {
+        lat
+        lng
+      }
+      likeUserIds
+      description
+      user {
+        id
+        name
+        iconImageUrl
+        description
+        bookmarkPostIds
+      }
+      comments {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+query GetComment($id: ID!) {
+  getComment(id: $id) {
+    id
+    content
+    post {
+      id
+      date
+      imageUrls
+      trainName
+      station
+      line
+      location {
+        lat
+        lng
+      }
+      likeUserIds
+      description
+      user {
+        id
+        name
+        iconImageUrl
+        description
+        bookmarkPostIds
+      }
+      comments {
+        nextToken
+      }
+    }
+  }
+}
+query ListComments(
+  $filter: ModelCommentFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listComments(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      content
+      post {
+        id
+        date
+        imageUrls
+        trainName
+        station
+        line
+        likeUserIds
+        description
+      }
+    }
+    nextToken
+  }
+}

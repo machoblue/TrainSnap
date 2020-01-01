@@ -1,0 +1,19 @@
+{
+    "master": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-trainsnap-master-220314-authRole",
+            "UnauthRoleArn": "arn:aws:iam::849800239888:role/amplify-trainsnap-master-220314-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::849800239888:role/amplify-trainsnap-master-220314-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-trainsnap-master-220314-deployment",
+            "UnauthRoleName": "amplify-trainsnap-master-220314-unauthRole",
+            "StackName": "amplify-trainsnap-master-220314",
+            "StackId": "arn:aws:cloudformation:us-east-1:849800239888:stack/amplify-trainsnap-master-220314/46532bf0-1116-11ea-bc56-1230a5204572"
+        },
+        "categories": {
+            "auth": {
+                "trainsnap0c06c8ec": {}
+            }
+        }
+    }
+}
