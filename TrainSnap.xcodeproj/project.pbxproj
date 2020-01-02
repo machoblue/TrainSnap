@@ -10,6 +10,8 @@
 		4D47D43C767C595D70AC5661 /* Pods_TrainSnapTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 407BFC3705DC503DF4CBA51C /* Pods_TrainSnapTests.framework */; };
 		5BFDEB3D4B5D8CC58911CDDC /* Pods_TrainSnap_TrainSnapUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1546613F74F11458E9F60E01 /* Pods_TrainSnap_TrainSnapUITests.framework */; };
 		9C42B93223AEE6100049BF6E /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C42B93123AEE6100049BF6E /* SignInViewModel.swift */; };
+		9C59895623BE9D5800930D83 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C59895523BE9D5800930D83 /* ImagePickerViewController.swift */; };
+		9C59895823BEA4C200930D83 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C59895723BEA4C200930D83 /* ImagePickerView.swift */; };
 		9CD9C77C23A603040047327D /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9C77B23A603040047327D /* PageViewController.swift */; };
 		9CD9C77E23A608B30047327D /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9C77D23A608B30047327D /* PageControl.swift */; };
 		9CD9C78023A609BF0047327D /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD9C77F23A609BF0047327D /* PageView.swift */; };
@@ -65,6 +67,8 @@
 		5AAD2626D7E6FB11BEDA6721 /* Pods_TrainSnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrainSnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78954EE3F1621DA8F7B6B325 /* Pods-TrainSnap-TrainSnapUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainSnap-TrainSnapUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrainSnap-TrainSnapUITests/Pods-TrainSnap-TrainSnapUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C42B93123AEE6100049BF6E /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		9C59895523BE9D5800930D83 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		9C59895723BEA4C200930D83 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		9CD9C77B23A603040047327D /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9CD9C77D23A608B30047327D /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		9CD9C77F23A609BF0047327D /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				9CD9C77B23A603040047327D /* PageViewController.swift */,
 				9CD9C77D23A608B30047327D /* PageControl.swift */,
 				9CD9C77F23A609BF0047327D /* PageView.swift */,
+				9C59895523BE9D5800930D83 /* ImagePickerViewController.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				9CD9C78123A618340047327D /* TimelineView.swift */,
 				9CD9C79D23AD00EE0047327D /* SignInView.swift */,
 				9CD9C79623ABA0170047327D /* TrainSnapTabView.swift */,
+				9C59895723BEA4C200930D83 /* ImagePickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				9CD9C78223A618340047327D /* TimelineView.swift in Sources */,
 				9CE849BF238A7B3E00110E77 /* SceneDelegate.swift in Sources */,
 				9CD9C79E23AD00EE0047327D /* SignInView.swift in Sources */,
+				9C59895623BE9D5800930D83 /* ImagePickerViewController.swift in Sources */,
 				9CE84A452394945A00110E77 /* RemoteImage.swift in Sources */,
 				9CD9C79C23AC53960047327D /* UserUtil.swift in Sources */,
 				9CD9C78023A609BF0047327D /* PageView.swift in Sources */,
@@ -523,6 +530,7 @@
 				9CE84A482395E81B00110E77 /* Post.swift in Sources */,
 				9CE84A3D2393AB3400110E77 /* API.swift in Sources */,
 				9CD9C77C23A603040047327D /* PageViewController.swift in Sources */,
+				9C59895823BEA4C200930D83 /* ImagePickerView.swift in Sources */,
 				9CD9C79923AC51A60047327D /* PostService.swift in Sources */,
 				9CE84A4C2396849600110E77 /* Comment.swift in Sources */,
 				9CE84A4A2396847F00110E77 /* User.swift in Sources */,
