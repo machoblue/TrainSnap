@@ -9,6 +9,8 @@
 import Foundation
 import SwiftUI
 
+import AWSS3
+
 struct ImagePickerViewController: UIViewControllerRepresentable {
     @Environment(\.presentationMode)
     var presentationMode
@@ -34,6 +36,44 @@ struct ImagePickerViewController: UIViewControllerRepresentable {
         init(presentationMode: Binding<PresentationMode>, image: Binding<Image?>) {
             _presentationMode = presentationMode
             _image = image
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            print("***", info)
+            let uiImage = info[.originalImage] as! UIImage
+            image = Image(uiImage: uiImage)
+            uploadData(image: uiImage)
+            presentationMode.dismiss()
+        }
+        
+        func uploadData(image: UIImage) {
+            guard let data = image.jpegData(compressionQuality: 0.0) else { return }
+            
+            let expression = AWSS3TransferUtilityMultiPartUploadExpression()
+            expression.progressBlock = { (task, progress) in
+                DispatchQueue.main.async {
+                    print("### progress:", progress)
+                }
+            }
+            
+            AWSS3TransferUtility.default().uploadUsingMultiPart(
+                data: data,
+                bucket: "trainsnap-master",
+                key: "public/image_\(Date().description).jpeg",
+                contentType: "image/jpeg",
+                expression: expression
+            ) { (task, error) in
+                DispatchQueue.main.async {
+                    print("### complete:", task)
+                }
+            }
+            .continueWith { task in
+                DispatchQueue.main.async {
+                    print("### continueWith")
+                }
+            }
+            
+            print("### end")
         }
     }
 }

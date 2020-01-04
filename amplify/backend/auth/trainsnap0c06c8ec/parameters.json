@@ -1,6 +1,6 @@
 {
     "identityPoolName": "trainsnap0c06c8ec_identitypool_0c06c8ec",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "trains0c06c8ec",
     "userPoolName": "trainsnap0c06c8ec_userpool_0c06c8ec",
     "autoVerifiedAttributes": [

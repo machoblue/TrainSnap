@@ -7,6 +7,7 @@ target 'TrainSnap' do
 
   pod 'AWSAppSync', '~>2.15.0'
   pod 'AWSMobileClient', '~> 2.12.0'
+  pod 'AWSS3', '~> 2.12.0'
   pod 'Nuke', '~> 8.0'
 
   # Pods for TrainSnap

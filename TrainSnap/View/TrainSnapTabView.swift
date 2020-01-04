@@ -18,7 +18,8 @@ struct TrainSnapTabView: View {
                     Image(systemName: "1.square.fill")
                     Text("Timeline")
                 }
-            Text("Second")
+//            Text("Second")
+             ImagePickerView()
                 .tabItem {
                     Image(systemName: "2.square.fill")
                     Text("Second")

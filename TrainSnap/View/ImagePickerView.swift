@@ -22,6 +22,7 @@ struct ImagePickerView: View {
             }
             image?
                 .resizable()
+//                .aspectRatio(1, contentMode: .fit)
                 .frame(width: 100, height: 100)
         }
         .sheet(isPresented: $showImagePicker) {
